@@ -6,14 +6,14 @@ const checkForPalindrome = (input) => {
   const originalInput = input
 
   if (input === '') {
-    alert('Please input a value')
+    alert('Ingrese un texto, please.')
     return
   }
 
   resultDiv.replaceChildren()
 
   const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, "").toLowerCase();
-  let resultMsg = `<strong>${originalInput}</strong> ${lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'is' : 'is not'} a palindrome.`
+  let resultMsg = `<strong>${originalInput}</strong> ${lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'es' : 'no es'} un palíndromo.`
 
   const pTag = document.createElement('p')
   pTag.className = 'user-input'
